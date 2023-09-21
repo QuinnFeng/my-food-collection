@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+</head>
+<body>
+
+  <nav id="topNav" class="navbar nav">
+    <div class="container">
+        <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
+            <span>&#9776;</span>
+        </button>  
+        <a class="navbar-brand" href="index.html">My Food Collections</a>
+        <div class="navs">
+            <ul class="navbar-nav">
+                <li class="nav-link">
+                    <a href="#favs">Favorites</a> 
+                </li>
+                <li class="nav-link">
+                    <a href="#main-collection">Main</a> 
+                </li>
+                <li class="nav-link hidden">
+                    <a href="#b-header">Beef</a> </li>
+                </li>
+                <li  class="nav-link hidden">
+                    <a href="#sp-header">Specialties</a>
+                </li>
+                <li  class="nav-link hidden">
+                    <a href="#nf-header">MeiFan</a>
+                </li>
+                <li  class="nav-link hidden">
+                    <a href="#ds-header">Desserts</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+  <!-- FAVS -->
+  <section id="favs">
+    <div>
+      <h2>Favorites Collection</h2>
+    </div>
+    <div id="favorites">
+    </div>
+  </section>  
+
+  <div class="buttons">
+    <button id="toggleButton">Toggle View</button>
+  </div>
+
+
+  <section id="collection">
+    <div id="main-collection">
+      <div id="main-header" class="collection-header">
+        <div class="results">
+            <h2>Main Collection</h2>
+            <p id="main-results"></p>
+        </div>
+        <div class="options">
+            <div>
+                <label for="sort-options-main">Sort by:</label>
+                <select id="sort-options-main">
+                    <option value="name">Name</option>
+                    <option value="id">ID</option>
+                </select>
+            </div>
+            <div>
+              <label for="order-options-main">Order by:</label>
+              <select id="order-options-main">
+                <option value="asc">ASC</option>
+                <option value="desc">DESC</option>
+              </select>
+            </div>
+        </div> 
+      </div>
+      <div class="container search-container">
+        <label for="search">
+          <input autocomplete="off" id="search" type="text" class="search-input" placeholder="Search...">
+          <i class="fas fa-search"></i>
+        </label>
+        <ul class="portfolio-filter-nav ul-defaults-none">
+          <li data-filter="all"class="filter-link active">All</li>
+          <li data-filter="b" class="filter-link">Beef</li>
+          <li data-filter="sp" class="filter-link">House Specialties</li>
+          <li data-filter="nf" class="filter-link">Mei Fan</li>
+          <li data-filter="ds" class="filter-link">Desserts</li>
+        </ul>
+      </div>
+      <div id="main">
+      </div>
+    </div>
+
+    <div id="categories" class="hidden">
+      <div id="b-header" class="collection-header">
+        <div class="results">
+            <h2>Beef Collection</h2>
+            <p id="b-results"></p>
+        </div>
+        <div class="options">
+            <div>
+                <label for="sort-options-b">Sort by:</label>
+                <select id="sort-options-b">
+                    <option value="name">Name</option>
+                    <option value="id">ID</option>
+                </select>
+                </div>
+                <div>
+                <label for="order-options-b">Order by:</label>
+                <select id="order-options-b">
+                    <option value="asc">ASC</option>
+                    <option value="desc">DESC</option>
+                </select>
+            </div>
+        </div>     
+      </div>
+      <div id="b" class="category"></div>
+
+      
+      <div id="sp-header" class="collection-header">
+        <div class="results">
+            <h2>House Specialties</h2>
+            <p id="sp-results"></p>
+        </div>
+        <div class="options">
+            <div>
+                <label for="sort-options-sp">Sort by:</label>
+                <select id="sort-options-sp">
+                    <option value="name">Name</option>
+                    <option value="id">ID</option>
+                </select>
+            </div>
+            <div>
+                <label for="order-options-sp">Order by:</label>
+                <select id="order-options-sp">
+                    <option value="asc">ASC</option>
+                    <option value="desc">DESC</option>
+                </select>
+            </div>
+        </div>
+      </div>  
+      <div id="sp" class="category"></div>
+      
+      <div id="nf-header" class="collection-header">
+        <div class="results">
+            <h2>Mei Fan</h2>
+            <p id="nf-results"></p>
+        </div>
+        <div class="options">
+            <div>
+                <label for="sort-options-nf">Sort by:</label>
+                <select id="sort-options-nf">
+                  <option value="name">Name</option>
+                  <option value="id">ID</option>
+                </select>
+            </div>
+      
+            <div>  
+                <label for="order-options-nf">Order by:</label>
+                <select id="order-options-nf">
+                  <option value="asc">ASC</option>
+                  <option value="desc">DESC</option>
+                </select>
+            </div>
+        </div>
+      </div> 
+      <div id="nf" class="category"></div>
+      
+      <div id="ds-header" class="collection-header">
+        <div class="results">
+            <h2>Desserts</h2>
+            <p id="ds-results"></p>
+        </div>
+        <div class="options">
+            <div>
+                <label for="sort-options-ds">Sort by:</label>
+                <select id="sort-options-ds">
+                  <option value="name">Name</option>
+                  <option value="id">ID</option>
+                </select>
+            </div>
+      
+            <div>
+                <label for="order-options-ds">Order by:</label>
+                <select id="order-options-ds">
+                  <option value="asc">ASC</option>
+                  <option value="desc">DESC</option>
+                </select>
+            </div>
+        </div>
+      </div> 
+      <div id="ds" class="category"></div>
+    </div>
+  </section>
+
+  
+
+  <script src="./js/index.js"></script>
+  <script>
+    const nav =document.getElementById("topNav");
+    window.onscroll=function(){
+      if(window.pageYOffset > 0){   
+        nav.classList.add("sticky");
+      }
+      else{
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+</body>
+</html>
+
